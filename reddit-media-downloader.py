@@ -12,6 +12,13 @@ Duplication removal algorithm using imagededup:
 - Then, delete the original frame
 - If the value is not in the dict of frames, delete all the duplicates
 
+# 
+
+
+# TODO: https://pypi.org/project/pmaw/ - MultiThreaded Pushift downloader
+# TODO: Wait. All data before november 3rd, 2022 is not available via pushshift. Can be grabbed via reddit api though
+
+
 """
 
 import requests, datetime
