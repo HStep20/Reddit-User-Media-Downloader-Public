@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit User Download Form</title>
+</head>
+
+<body>
+    <title>Enter a Username to download media from</title>
+    <form method="post">
+
+        <label for="username"> Username </label>
+        <input type="text" name="username" value="" required="true" />
+        <br>
+
+        <label for="subreddit"> Subreddit </label>
+        <input type="text" name="subreddit" value="" />
+        <br>
+
+        <label for="start_date"> Start Date </label>
+        <input type="date" name="start_date" value="" />
+        <br>
+
+        <label for="end_date"> End Date </label>
+        <input type="date" name="end_date" value="" />
+        <br>
+
+        <label for="post_limit"> Post Limit </label>
+        <input type="number" name="post_limit" value="" />
+
+
+        <br>
+        <input type="submit">
+    </form>
+
+    <p>Result: Downloading {{ post_limit }} of {{ username }}'s Posts from {{ start_date }} to {{ end_date }}</p>
+
+</body>
+
+</html>

@@ -2,3 +2,4 @@
 output/
 execution.log
 docker-run.txt
+*.pyc
