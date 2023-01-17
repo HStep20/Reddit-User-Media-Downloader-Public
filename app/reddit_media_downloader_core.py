@@ -17,13 +17,13 @@ Duplication removal algorithm using imagededup:
 
 # TODO: https://pypi.org/project/pmaw/ - MultiThreaded Pushift downloader
 # TODO: Wait. All data before november 3rd, 2022 is not available via pushshift. Can be grabbed via reddit api though
+# TODO: Convert to Loguru
 
 
 """
 
 import requests, datetime
 import yt_dlp
-import argparse, sys
 import json
 import os, sys
 import logging
@@ -225,13 +225,9 @@ class UserDownload:
         print("\n\n")
         print(duplicates)
         self.removeDuplicates(duplicates, video_frames, images_dir)
-        logging.info("Execution complete. Exiting...")
-        sys.exit()
 
 
 def setup_vars():
-
-    global args
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(message)s",
         level="INFO",
