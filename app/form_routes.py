@@ -28,7 +28,8 @@ def form_post(
     end_date=Form(None),
     post_limit: int = Form(100),
 ):
-    rmdc.main(username, subreddit, post_limit)
+    new_download = rmdc.UserDownload(username, subreddit, post_limit)
+    new_download.download()
     return templates.TemplateResponse(
         "form.html",
         context={
