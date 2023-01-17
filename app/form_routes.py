@@ -28,7 +28,8 @@ def download_new_user(username: str, subreddit: str, post_limit: int):
 async def form_post(
     request: Request,
     background_tasks: BackgroundTasks,
-    username: str = Form(),
+    username: str = Form(...),
+    post_type: str = Form(...),
     subreddit: str = Form(None),
     start_date=Form(None),
     end_date=Form(None),
@@ -42,6 +43,7 @@ async def form_post(
         context={
             "request": request,
             "username": username,
+            "post_type": post_type,
             "start_date": start_date,
             "end_date": end_date,
             "post_limit": post_limit,

@@ -14,6 +14,13 @@
         <input type="text" name="username" value="" required="true" />
         <br>
 
+        <label for="post_type">Post Type:</label>
+        <select name="post_type" id="post_type">
+            <option value="images">Images</option>
+            <option value="comments">Comments</option>
+        </select>
+        <br>
+
         <label for="subreddit"> Subreddit </label>
         <input type="text" name="subreddit" value="" />
         <br>
@@ -34,7 +41,8 @@
         <input type="submit">
     </form>
 
-    <p>Result: Downloading {{ post_limit }} of {{ username }}'s Posts from {{ start_date }} to {{ end_date }}</p>
+    <p>Result: Downloading {{ post_limit }} {{ post_type }}'s of {{ username }}'s from {{ start_date }} to
+        {{ end_date }}</p>
 
 </body>
 
