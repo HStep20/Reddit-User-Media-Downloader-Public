@@ -16,6 +16,7 @@ Duplication removal algorithm using imagededup:
 
 
 # TODO: https://pypi.org/project/pmaw/ - MultiThreaded Pushift downloader
+# TODO: Streamlit is not multithreaded friendly, possibley causing it to error once it starts downloading media - https://github.com/streamlit/streamlit/issues/1906
 # TODO: Wait. All data before november 3rd, 2022 is not available via pushshift. Can be grabbed via reddit api though
 # TODO: Convert to Loguru
 
