@@ -32,10 +32,14 @@ from imagededup.methods import PHash
 
 
 class UserDownload:
-    def __init__(self, username, subreddit, post_limit) -> None:
+    def __init__(
+        self, username, subreddit, post_limit, start_date=None, end_date=None
+    ) -> None:
         self.username = username
         self.subreddit = subreddit
         self.post_limit = post_limit
+        self.start_date = start_date
+        self.end_date = end_date
         self.url_list = list()
 
     # pushshift helper function
@@ -225,6 +229,7 @@ class UserDownload:
         print("\n\n")
         print(duplicates)
         self.removeDuplicates(duplicates, video_frames, images_dir)
+        return True
 
 
 def setup_vars():

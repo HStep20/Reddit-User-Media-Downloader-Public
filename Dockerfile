@@ -14,6 +14,6 @@ WORKDIR /build/app
 
 VOLUME /output
 
-EXPOSE 4167
+EXPOSE 8501
 
-CMD python -m uvicorn form_routes:app --host 0.0.0.0 --port 4167
+CMD python -m streamlit webpage.py
