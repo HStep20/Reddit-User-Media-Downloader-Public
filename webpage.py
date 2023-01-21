@@ -21,4 +21,8 @@ if st.button("Download User Media"):
         start_date=start_date,
         end_date=end_date,
     )
-    new_download.download()
+    with st.spinner(
+        text=f"Downloading and Deduplicating {username}'s posts between {start_date} and {end_date}"
+    ):
+        new_download.download()
+        st.success("Done")
