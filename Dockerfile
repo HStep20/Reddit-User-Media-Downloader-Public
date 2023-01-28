@@ -15,4 +15,4 @@ VOLUME /output
 
 EXPOSE 8501
 
-ENTRYPOINT [ "streamlit","run", "webpage.py", "--server.port=8501", "--server.address=127.0.0.1"]
+ENTRYPOINT [ "streamlit","run", "webpage.py"]
